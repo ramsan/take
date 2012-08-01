@@ -1,0 +1,37 @@
+<% k = {} %>
+<% i = 0%>
+<% @msg.each do |a| %>
+<% a.each do |b| %><p>
+<!-- <% b[0] %>    <% b[1] %> -->
+<% k[b[0]]=[b[0],b[1]] %>
+<% i=i+1 %>
+
+
+<% end %>
+<% end %>
+
+<%= k %><br/>
+<% @msg %>
+<%= form_tag("a1", :method => "get") do %>
+
+<%= select_tag(:c, options_for_select( k )) %>
+
+
+  <%= label_tag(:q, "Search for:") %>
+  <%= text_field_tag(:q) %>
+  <%= submit_tag("Search") %>
+
+
+
+
+
+
+
+
+
+
+<% end %>
+
+
+
+
