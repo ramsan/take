@@ -1400,7 +1400,7 @@ i= i+1
 
   # starting for emailconform
   def emailconform
-  userid = 151 #params[:userid]
+  userid = 156 #params[:userid]
   text = 'hai'#params[:text]
 
   @msg = Array.new
